@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>            
+        <title>GIMM 285 Form: Evan Solis</title>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <h1>Favorite Baseball/Softball Player</h1>
+
+        <hr />
+
+        <div class='row'>
+            <div class='col-2'>
+                <label>Number on Uniform</label>
+            </div>
+            <div class='col-10'>
+                <form action="/action_page.php"
+                      oninput="x.value=parseInt(numbers.value)">
+                    0
+                    <input type="range" name="uniform_numbers" id="numbers" value="50">
+                    100
+
+                    =
+                    <output name="x" for="numbers"></output>
+                    <br><br>
+
+                </form>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-2'>
+                <label>Color of Uniform</label>
+            </div>
+            <div class='col-10'>
+                <select name="uniform_colors" id="colors">
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Brown">Brown</option>
+                </select>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-2'>
+                <label>Batting Average</label>
+            </div>
+            <div class='col-10'>
+                <form action="/action_page.php"
+                      oninput="x.value=parseFloat(battingnumbers.value)">
+                    0
+                    <input type="range" name="battingnumbers" id="batnumbers" value="0" min="0" max="1" step="0.001">
+                    1.000
+
+                    =
+                    <output name="x" for="batnumbers"></output>
+                    <br><br>
+
+                </form>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-2'>
+                <label>Nationality of Baseball/Softball Player</label>
+            </div>
+            <div class='col-10'>
+                <select name="player_nationalities" id="nationalities">
+                    <option value="Red">Red</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Brown">Brown</option>
+                </select>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-2'>
+                <label>Gender of Baseball/Softball Player</label>
+            </div>
+            <div class='col-10'>
+                <select name="player_gender" id="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class='col-2'>
+                <label>Upload a picture of the Baseball/Softball Player:</label>
+            </div>
+            <div class='col-10'>
+                <input type="file" name="player_picture" id="picture_upload">
+            </div>
+        </div>
+    
+
+        <div class='row'>
+            <div class='col-12'>
+                <button id='submit'>Submit</button>
+            </div>
+        </div>
+
+        <hr />
+    </body>
+</html>
