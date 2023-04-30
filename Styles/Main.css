@@ -1,0 +1,364 @@
+@import url('reset.css');
+
+/*Color Palette*/
+.white { color: #ffffff; }
+.light-blue { color: #9cb6d1; }
+.medium-blue { color: #6a85b6; }
+.dark-blue { color: #474e8e; }
+
+html {
+font-size: 62.5%;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: #474e8e;
+background-image: url("../Images/Environmental Art Evan Solis.png");
+}
+
+/** Grid system - https://www.w3schools.com/css/css_rwd_grid.asp **/
+* {
+    box-sizing: border-box;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+ 
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/** Image - https://www.w3schools.com/css/css_rwd_grid.asp **/   
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/** Overflow (for tables) - https://www.w3schools.com/howto/howto_css_table_responsive.asp **/
+.overflow {
+    overflow-x:auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+body {
+line-height: 1.4rem;
+}
+
+h2 {
+font-size: 2.2rem;
+font-weight: 400;
+line-height: 1.1rem;
+text-align: center;
+color: darkblue;
+margin-bottom: 1rem;
+padding: 1rem;
+}
+
+hr {
+background-color: a85b6F;
+height: .5px;
+border: none;
+}
+
+nav a {
+position: relative;
+display: inline-block;
+padding-bottom: 3px;
+color: var(--dark-blue);
+transition: all 0.3s ease;
+}
+
+nav a::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 1px;
+background-color: #CDAD58;
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.3s ease;
+}
+
+nav a:hover { color: #474e8e; }
+
+nav a:hover::before { transform: scaleX(1); }
+
+#Previews hr { height: 0px; border: unset; }
+
+#Banner h2 {
+font-size: 2.8rem;
+font-weight: 400;
+line-height: 1.1rem;
+text-align: left;
+color: #7E600F;
+margin-bottom: 1rem;
+padding: 1rem;
+}
+
+h2 a { font-size: inherit; }
+
+h3 {
+font-size: 1.8rem;
+font-weight: 400;
+line-height: 1.1rem;
+text-align: center;
+color: #CDAD58;
+}
+
+p { font-size: 1.4rem; }
+a {
+font-size: 1.6rem;
+color: #474e8e;
+}
+
+#Portfolio {
+width: 992px;
+margin: 1.5rem auto;
+}
+
+header {
+background-color: #101010;
+box-shadow: 10px 5px 5px black;
+border-radius: 20px;
+padding: 1rem;
+margin-bottom: 1.5rem;
+overflow: hidden;
+color: #6a85b6;
+}
+
+h1 {
+font-weight: 400;
+font-size: 5rem;
+line-height: 1.1rem;
+text-align: left;
+margin: 3rem 0;
+clear: both;
+padding: 20px;
+}
+
+#Img1, #Img2 {
+width: 400px;
+height: 400px;
+align-content: center;
+padding: 1rem;
+display: block;
+margin: 0 auto;
+}
+
+.Logo, .Logo2 {
+width: 200px;
+height: 200px;
+padding: 1rem;
+display: block;
+margin: 0 auto;
+}
+
+.Tall,
+#Banner #Tall2 {
+  line-height: 1.2rem;
+  color: var(--dark-blue);
+}
+
+#Banner #Tall2 {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+#IntroParagraph {
+  float: right;
+  padding: 5rem;
+  font-size: 24px;
+  line-height: 2.5rem;
+}
+
+#Banner nav {
+  background-color: #202020;
+  border-radius: 10px;
+  padding: 1rem 0 1rem;
+  overflow: hidden;
+}
+
+#Banner nav ul {
+  text-align: center;
+}
+
+#Banner nav li {
+  display: inline;
+}
+
+#Banner nav a {
+  text-decoration: none;
+  padding: 1rem 1rem;
+  color: var(--medium-blue);
+}
+
+#Banner nav a:hover {
+  background-color: #404040;
+  color: #a98831;
+}
+
+#Wrapper {
+  background-color: #101010;
+  margin-bottom: 1.5rem;
+  box-shadow: 10px 5px 5px black;
+  border-radius: 20px;
+  overflow: hidden;
+  color: var(--dark-blue);
+}
+
+#Wrapper h1 {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+
+}
+
+#Wrapper h2 {
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+}
+
+#Wrapper #Singing h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.1rem;
+  text-align: left;
+  color: #7e600f;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+#Previews {
+  width: 75%;
+ text-align: center;
+ align-content: center;
+  background-color: #202020;
+  padding: 1rem;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+#Previews h2 {
+  margin-bottom: 1.5rem;
+  color: darkblue;
+}
+
+#MiddleTitle {
+  padding: 20px;
+  text-align: left;
+}
+
+#Links {
+  width: 20%;
+  float: left;
+  line-height: 1.6rem;
+}
+
+#Links h2 {
+  line-height: 2.2rem;
+}
+
+#Links ul {
+  text-align: center;
+}
+
+#Links li {
+  padding-bottom: 1rem;
+}
+
+#Links a {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+#Links a:hover {
+  color: #2d3474;
+  text-decoration: underline;
+}
+
+#Previews a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+#Previews a:hover {
+  color: mediumblue;
+  text-decoration: underline;
+}
+
+#Previews p {
+  padding: 0.5rem;
+}
+
+#Previews hr {
+  border-color: var(--dark-green);
+  border-style: ridge;
+}
+
+#Previews footer {
+  padding: 0.5rem;
+}
+#Footer{
+    background-color: #101010;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 20px;
+    padding: 1.5rem;
+    overflow: hidden;
+    color: #ffffff; /* updated color to white */
+  }
+  
+  #Footer p{
+    clear: both;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff; /* updated color to white */
+  }
+  
+  #OtherFooter #Footer{
+    background-color: #101010;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 20px;
+    padding: 3rem;
+    color: #ffffff; /* updated color to white */
+  }
+  
+  #OtherFooter #Footer h1{
+    clear: both;
+    padding-top: 1rem;
+    text-align: center;
+    color: #ffffff; /* updated color to white */
+    line-height: 4.5rem;
+  }
+  
+  
+  
+  
+  
+  
+  
